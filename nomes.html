@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ordenar Nomes</title>
+</head>
+<body>
+    <h1>Nomes em Ordem Alfabética</h1>
+    
+    <script>
+        // Defina a matriz de nomes
+        var nomes = ["Ana", "Carlos", "Beatriz", "Daniel", "Eva"];
+
+        // Use um loop for para ordenar os nomes em ordem alfabética
+        for (var i = 0; i < nomes.length; i++) {
+            for (var j = i + 1; j < nomes.length; j++) {
+                if (nomes[i] > nomes[j]) {
+                    // Troque os elementos se estiverem fora de ordem
+                    var temp = nomes[i];
+                    nomes[i] = nomes[j];
+                    nomes[j] = temp;
+                }
+            }
+        }
+
+        // Agora, a matriz de nomes estará em ordem alfabética
+        document.write("<ul>");
+        for (var k = 0; k < nomes.length; k++) {
+            document.write("<li>" + nomes[k] + "</li>");
+        }
+        document.write("</ul>");
+    </script>
+</body>
+</html>
