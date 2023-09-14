@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ordenar Nomes em Ordem Decrescente</title>
+</head>
+<body>
+    <h1>Nomes em Ordem Decrescente</h1>
+    
+    <script>
+        // Defina a matriz de nomes
+        var nomes = ["Ana", "Carlos", "Beatriz", "Daniel", "Eva"];
+
+        // Use um loop while para classificar os nomes em ordem decrescente
+        var trocaFeita;
+        do {
+            trocaFeita = false;
+            for (var i = 0; i < nomes.length - 1; i++) {
+                if (nomes[i] < nomes[i + 1]) {
+                    // Troque os elementos se estiverem fora de ordem (decrescente)
+                    var temp = nomes[i];
+                    nomes[i] = nomes[i + 1];
+                    nomes[i + 1] = temp;
+                    trocaFeita = true;
+                }
+            }
+        } while (trocaFeita);
+
+        // Agora, a matriz de nomes estará em ordem decrescente
+        document.write("<ul>");
+        for (var k = 0; k < nomes.length; k++) {
+            document.write("<li>" + nomes[k] + "</li>");
+        }
+        document.write("</ul>");
+    </script>
+</body>
+</html>
